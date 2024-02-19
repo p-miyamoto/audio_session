@@ -547,7 +547,7 @@ class AudioSessionConfiguration {
   /// A recipe for creating an audio configuration for a music player.
   const AudioSessionConfiguration.music()
       : this(
-          avAudioSessionCategory: AVAudioSessionCategory.playback,
+          avAudioSessionCategory: AVAudioSessionCategory.ambient,
           avAudioSessionMode: AVAudioSessionMode.defaultMode,
           androidAudioAttributes: const AndroidAudioAttributes(
             contentType: AndroidAudioContentType.music,
@@ -560,7 +560,7 @@ class AudioSessionConfiguration {
   /// predominantly plays continuous speech such as a podcast or audiobook app.
   const AudioSessionConfiguration.speech()
       : this(
-          avAudioSessionCategory: AVAudioSessionCategory.playback,
+          avAudioSessionCategory: AVAudioSessionCategory.ambient,
           avAudioSessionMode: AVAudioSessionMode.spokenAudio,
           androidAudioAttributes: const AndroidAudioAttributes(
             contentType: AndroidAudioContentType.speech,

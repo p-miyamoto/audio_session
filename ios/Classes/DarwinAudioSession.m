@@ -103,6 +103,7 @@ static NSHashTable<DarwinAudioSession *> *sessions = nil;
     NSNumber *policyIndex = (NSNumber *)args[3];
     NSError *error = nil;
     BOOL status;
+    NSLog(@"カテゴリーインデックス：%d", categoryIndex);
     AVAudioSessionCategory category = [self flutterToCategory:categoryIndex];
     if (!category) category = AVAudioSessionCategorySoloAmbient;
     NSString *mode = [self flutterToMode:modeIndex];
